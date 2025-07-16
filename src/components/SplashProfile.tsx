@@ -13,7 +13,7 @@ export const SplashProfile = ({ onAnimationComplete }: SplashProfileProps) => {
     <motion.img
       src="/assets/profile.jpg"
       alt="Teuku Sem Profile"
-      className="fixed object-cover transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+      className="fixed object-cover transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 rounded-full"
       initial={{ 
         width: isMobile ? '160px' : '240px', 
         height: isMobile ? '200px' : '320px',

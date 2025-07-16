@@ -15,7 +15,7 @@ export const projects: Project[] = [
   {
     image: "/assets/nawatamu.png",
     title: "Nawatamu",
-    desc: "All in one platform for sending ERC20 tokens across the Ethereum blockchain on the Goerli Testnet.ETH TRANSACT helps in transferring tokens fast and easy. ETHTRANSACT also gives real-time data of the prices of over 200 cryptocurrencies worldwide.",
+    desc: "Nawatamu is a comprehensive digital guest management platform specifically designed to streamline event organization and guest handling for various types of gatherings including weddings, corporate events, and formal ceremonies. The system revolutionizes traditional guest management by leveraging QR code technology and WhatsApp integration to create a seamless experience from invitation to check-in.",
     link: "https://tamu.nawagroup.id/login",
   },
   {

@@ -3,7 +3,6 @@ import { motion } from 'framer-motion';
 
 // Components
 import { Header } from './components/Header';
-import { SplashProfile } from './components/SplashProfile';
 import { HeroText } from './components/HeroText';
 import { CircularText } from './components/CircularText';
 import { AboutMeHighlight } from './components/AboutMeHighlight';
@@ -23,20 +22,45 @@ interface AppProps {
 }
 
 export default function App({ onNavigate: _ }: AppProps) {
-  const [splashComplete, setSplashComplete] = useState(false);
-
-  const handleSplashComplete = () => {
-    setSplashComplete(true);
-  };
+  const [splashComplete] = useState(true);
 
   return (
     <div className="min-h-screen overflow-hidden text-white bg-black font-michroma">
       <Header />
       
       <section className="relative flex flex-col items-center justify-center min-h-screen px-4 md:px-8 lg:px-16">
-        <SplashProfile onAnimationComplete={handleSplashComplete} />
+        {/* <SplashProfile onAnimationComplete={handleSplashComplete} /> */}
         <HeroText splashComplete={splashComplete} />
+        
         <CircularText />
+        
+        <motion.div
+          className="absolute bottom-16 right-8 md:bottom-20 md:right-12"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.3 }}
+        >
+          <p className="text-xs tracking-wider text-right text-gray-400 uppercase">
+            Available For Freelance<br />
+            Work From JAN '24
+          </p>
+        </motion.div>
+        
+        <motion.div
+          className="absolute bottom-8 right-8 md:bottom-12 md:right-12"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.5 }}
+        >
+          <motion.a
+            href="mailto:semteuku02@gmail.com"
+            className="text-xs font-bold text-white underline uppercase transition-colors duration-300 cursor-pointer hover:text-red-500"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            LET'S TALK
+          </motion.a>
+        </motion.div>
       </section>
 
       <section className="relative flex flex-col justify-center min-h-screen p-8 md:p-16 lg:p-24">

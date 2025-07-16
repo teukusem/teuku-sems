@@ -77,7 +77,7 @@ export const HeroText = ({ splashComplete }: HeroTextProps) => {
             <motion.img
               src="/assets/profile.jpg"
               alt="Teuku Sem Profile"
-              className="object-cover w-20 h-28 md:w-28 md:h-36"
+              className="object-cover w-20 h-28 md:w-28 md:h-36 rounded-full"
               style={{ minWidth: '5rem', minHeight: '7rem' }}
               animate={profileImageStyles}
               transition={{ type: 'spring', stiffness: 40, damping: 20 }}
