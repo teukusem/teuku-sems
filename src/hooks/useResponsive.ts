@@ -5,7 +5,7 @@ export const useResponsive = () => {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    let timeoutId: NodeJS.Timeout;
+    let timeoutId: number;
     
     const handleResize = () => {
       clearTimeout(timeoutId);
