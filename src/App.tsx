@@ -22,7 +22,7 @@ interface AppProps {
   onNavigate?: (path: string) => void;
 }
 
-export default function App({ onNavigate }: AppProps) {
+export default function App({ onNavigate: _ }: AppProps) {
   const [splashComplete, setSplashComplete] = useState(false);
 
   const handleSplashComplete = () => {
