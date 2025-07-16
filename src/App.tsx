@@ -40,7 +40,7 @@ export default function App({ onNavigate: _ }: AppProps) {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.3 }}
         >
-          <p className="text-xs tracking-wider text-right text-gray-400 uppercase">
+          <p className="text-xs tracking-wider text-right text-gray-300 uppercase">
             Available For Freelance<br />
             Work From JAN '24
           </p>
@@ -65,12 +65,12 @@ export default function App({ onNavigate: _ }: AppProps) {
 
       <section className="relative flex flex-col justify-center min-h-screen p-8 md:p-16 lg:p-24">
         <div className="flex flex-col items-start mb-8">
-          <span className="mb-1 text-xs font-bold tracking-widest text-gray-400 md:text-sm">01</span>
+          <span className="mb-1 text-xs font-bold tracking-widest text-gray-300 md:text-sm">01</span>
           <h2 className="text-3xl font-bold md:text-4xl lg:text-5xl">About Me</h2>
         </div>
         <AboutMeHighlight />
         <div className="absolute left-0 right-0 flex flex-col gap-2" style={{ bottom: '-5.5rem' }}>
-          <h3 className="font-normal mb-6 mt-12 text-[#9CA3AF] mx-auto">VARIOUS TECHNOLOGIES I USE</h3>
+          <h3 className="font-normal mb-6 mt-12 text-gray-300 mx-auto">VARIOUS TECHNOLOGIES I USE</h3>
           <TechnologyTicker 
             technologies={primaryTechnologies}
             direction="left"
@@ -84,7 +84,7 @@ export default function App({ onNavigate: _ }: AppProps) {
             direction="right"
             backgroundColor="bg-gradient-to-r from-gray-700 via-gray-900 to-black"
             textColor="text-gray-200"
-            symbolColor="text-gray-400"
+            symbolColor="text-gray-300"
             duration={22}
             marginTop="-1.5rem"
           />
@@ -99,7 +99,7 @@ export default function App({ onNavigate: _ }: AppProps) {
           whileInView="visible"
           viewport={{ once: true, amount: 0.1 }}
         >
-          <span className="mb-1 text-xs font-bold tracking-widest text-right text-gray-400 md:text-sm">02</span>
+          <span className="mb-1 text-xs font-bold tracking-widest text-right text-gray-300 md:text-sm">02</span>
           <motion.h2 variants={childVariants} className="text-3xl font-bold text-right md:text-4xl lg:text-5xl">Recent Projects</motion.h2>
           <motion.p variants={childVariants} className="max-w-3xl mb-12 text-lg leading-relaxed text-right md:text-xl">
             My recent work primarily involves building robust web applications, encompassing both client-commissioned projects and self-initiated developments. These projects often leverage React.js and Next.js to deliver impactful solutions.
@@ -169,7 +169,7 @@ export default function App({ onNavigate: _ }: AppProps) {
           semteuku02@gmail.com
         </motion.a>
 
-        <div className="flex items-center justify-between text-sm text-gray-500">
+        <div className="flex items-center justify-between text-sm text-gray-400">
           <span>JAKARTA, INA</span>
           <span>TEUKU SEM 2025</span>
         </div>

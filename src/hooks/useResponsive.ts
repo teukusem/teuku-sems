@@ -5,13 +5,21 @@ export const useResponsive = () => {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
+    let timeoutId: NodeJS.Timeout;
+    
     const handleResize = () => {
-      setIsMobile(window.innerWidth < BREAKPOINTS.MOBILE);
+      clearTimeout(timeoutId);
+      timeoutId = setTimeout(() => {
+        setIsMobile(window.innerWidth < BREAKPOINTS.MOBILE);
+      }, 150);
     };
 
     handleResize();
     window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
+    return () => {
+      window.removeEventListener('resize', handleResize);
+      clearTimeout(timeoutId);
+    };
   }, []);
 
   return { isMobile };

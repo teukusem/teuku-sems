@@ -33,6 +33,7 @@ export const TechnologyTicker = ({
     >
       <motion.div
         className="inline-block w-full"
+        style={{ willChange: 'transform' }}
         animate={{ x: [animationValues.from, animationValues.to] }}
         transition={{
           x: {

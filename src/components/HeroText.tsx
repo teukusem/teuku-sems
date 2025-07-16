@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
 import { motion } from 'framer-motion';
 import { containerVariants, itemVariants } from '../constants/animations';
 import { SCROLL_MULTIPLIERS } from '../constants/ui';
@@ -14,21 +14,24 @@ export const HeroText = ({ splashComplete }: HeroTextProps) => {
   const scrollY = useScroll();
   const { isMobile } = useResponsive();
 
-  const frontEndStyles = {
+  const frontEndStyles = useMemo(() => ({
     x: Math.max(-60, Math.min(0, -scrollY * SCROLL_MULTIPLIERS.HERO_TEXT)),
-    fontSize: isMobile ? '65px' : '85px'
-  };
+    fontSize: isMobile ? '65px' : '85px',
+    willChange: 'transform'
+  }), [scrollY, isMobile]);
 
-  const developerStyles = {
+  const developerStyles = useMemo(() => ({
     x: Math.min(60, Math.max(0, scrollY * SCROLL_MULTIPLIERS.HERO_TEXT)),
-    fontSize: isMobile ? '65px' : '85px'
-  };
+    fontSize: isMobile ? '65px' : '85px',
+    willChange: 'transform'
+  }), [scrollY, isMobile]);
 
-  const profileImageStyles = {
+  const profileImageStyles = useMemo(() => ({
     x: -scrollY * SCROLL_MULTIPLIERS.PROFILE_IMAGE,
     rotate: -scrollY * SCROLL_MULTIPLIERS.PROFILE_ROTATION,
-    opacity: splashComplete ? 1 : 0
-  };
+    opacity: splashComplete ? 1 : 0,
+    willChange: 'transform'
+  }), [scrollY, splashComplete]);
 
   return (
     <motion.div

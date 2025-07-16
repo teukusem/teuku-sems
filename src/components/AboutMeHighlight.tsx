@@ -19,8 +19,8 @@ export const AboutMeHighlight = () => {
     words.map((word, index) => (
       <motion.span
         key={index}
-        initial={{ color: '#6b7280' }}
-        animate={inView ? { color: '#ffffff' } : { color: '#6b7280' }}
+        initial={{ color: '#d1d5db' }}
+        animate={inView ? { color: '#ffffff' } : { color: '#d1d5db' }}
         transition={{ 
           duration: 0.3,
           delay: inView ? index * 0.1 : 0,

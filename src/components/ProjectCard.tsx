@@ -24,10 +24,10 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
       <img
         src={project.image}
         alt={project.title}
-        className="object-cover w-full h-48 mb-4 rounded-[1rem] border border-gray-700"
+        className="object-cover w-full h-48 mb-4 rounded-[1rem] border border-gray-600"
       />
       <h3 className="mb-2 text-2xl font-bold text-white">{project.title}</h3>
-      <p className="mb-4 text-[#9CA3AF]">{project.desc}</p>
+      <p className="mb-4 text-gray-300">{project.desc}</p>
     </motion.div>
   );
 };

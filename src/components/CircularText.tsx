@@ -10,7 +10,7 @@ export const CircularText = () => {
       transition={{ duration: ANIMATION_DURATIONS.HERO, delay: ANIMATION_DELAYS.HERO_DELAY, ease: "easeOut" }}
     >
       <div className="relative flex items-center justify-center w-24 h-24 p-0 m-0 md:w-32 md:h-32">
-        <svg viewBox="0 0 128 128" width="96" height="96" className="animate-spin-slow" style={{ minWidth: '6rem', minHeight: '6rem' }}>
+        <svg viewBox="0 0 128 128" width="96" height="96" className="animate-spin-slow" style={{ minWidth: '6rem', minHeight: '6rem', willChange: 'transform' }}>
           <defs>
             <path id="circlePath" d="M64,8a56,56 0 1,1 0,112a56,56 0 1,1 0,-112" />
           </defs>

@@ -149,11 +149,11 @@ export default function About() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.7 }}
           >
-            <p className="text-gray-300">
+            <p className="text-gray-200">
               I'm a full-stack software engineer with a primary focus on front-end development, specializing in React.js and Next.js. Passionate about creating clean, responsive, and user-friendly web applications. Eager to contribute to a team dedicated to building exceptional online experiences.
             </p>
             
-            <p className="text-gray-300">
+            <p className="text-gray-200">
               When I'm not building or exploring new web technologies, you'll likely find me indoors gaming or watching YouTube.
             </p>
           </motion.div>
@@ -170,7 +170,7 @@ export default function About() {
               {skills.map((skill, index) => (
                 <motion.div
                   key={skill}
-                  className="p-3 border border-gray-700 rounded-lg bg-gray-900/50 hover:border-red-500 transition-colors duration-300"
+                  className="p-3 border border-gray-600 rounded-lg bg-gray-900/50 hover:border-red-500 transition-colors duration-300"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: 1 + index * 0.05 }}
