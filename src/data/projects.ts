@@ -10,7 +10,7 @@ export const projects: Project[] = [
     image: "/assets/nawasmara-saas.png",
     title: "Nawasmara",
     desc: "Nawasmara is a comprehensive wedding invitation platform built with Next.js 15 and TypeScript. It's a multi-tenant SaaS application that allows users to create, customize, and host digital wedding invitations with professional templates.",
-    link: "https://nawasmara.com/",
+    link: "https://www.nawasmara.com/",
   },
   {
     image: "/assets/nawatamu.png",
